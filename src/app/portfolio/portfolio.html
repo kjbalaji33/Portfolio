@@ -1,0 +1,325 @@
+<div class="portfolio-container-dark">
+  
+  <!-- FLOATING TOP NAVIGATION BAR (Fixed-Position Navbar Frame) -->
+  <nav class="navbar-floating">
+    <div></div>
+    <!-- <div class="user-avatar-btn" (click)="isModalOpen = true" style="cursor: pointer;">
+      <fa-icon [icon]="aboutIcon"></fa-icon>
+    </div> -->
+    
+    <div class="nav-pills-desktop">
+      <a (click)="scrollToElement(homeSection)" class="nav-pill" [class.active]="activeSection === 'home'">
+        <fa-icon [icon]="homeIcon" class="nav-icon-spacing"></fa-icon> Home
+      </a>
+      <a (click)="scrollToElement(aboutSection)" class="nav-pill" [class.active]="activeSection === 'about'">
+        <fa-icon [icon]="aboutIcon" class="nav-icon-spacing"></fa-icon> About
+      </a>
+      <a (click)="scrollToElement(educationSection)" class="nav-pill" [class.active]="activeSection === 'education'">
+        <fa-icon [icon]="educationIcon" class="nav-icon-spacing"></fa-icon> Education
+      </a>
+      <a (click)="scrollToElement(careerSection)" class="nav-pill" [class.active]="activeSection === 'career'">
+        <fa-icon [icon]="careerIcon" class="nav-icon-spacing"></fa-icon> Career
+      </a>
+      <a (click)="scrollToElement(projectsSection)" class="nav-pill" [class.active]="activeSection === 'projects'">
+        <fa-icon [icon]="projectsIcon" class="nav-icon-spacing"></fa-icon> Projects
+      </a>
+    </div>
+    
+   <!-- Settings Action Button Component -->
+
+<!-- Contact Information Backdrop Modal Overlay -->
+
+
+  </nav>
+
+  <!-- HOME SECTION CORE HERO GRID -->
+  <main #homeSection id="home" class="hero-flex-layout">
+     <div class="user-avatar-btn" (click)="isModalOpen = true" style="cursor: pointer;">
+      <fa-icon [icon]="aboutIcon"></fa-icon>
+    </div>
+
+<div class="modal-backdrop" *ngIf="isModalOpen" (click)="isModalOpen = false">
+  
+  <!-- Modal Content Card Container -->
+  <div class="education-card modal-content" (click)="$event.stopPropagation()">
+    
+    <!-- Modal Functional Header Block -->
+    <div class="edu-header" style="margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center;">
+      <h3 style="margin: 0;">Contact Details</h3>
+      <button class="edu-timeline" (click)="isModalOpen = false" style="border: none; cursor: pointer; padding: 4px 12px;">Close</button>
+    </div>
+
+    <!-- Main Contact Information Details -->
+    <ul style="list-style-type: none; padding-left: 0;">
+      <li style="margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+        <i class="fa-solid fa-envelope edu-icon" style="font-size: 1.2rem;"></i>
+        <div>
+          <strong style="display: block; font-size: 0.85rem; color: #718096;">Email ID</strong>
+          <a href="mailto:your.email@example.com" class="edu-institution" style="text-decoration: none; font-size: 1rem;">kjbalaji12@gmail.com</a>
+        </div>
+      </li>
+      
+      <li style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+        <i class="fa-solid fa-phone edu-icon" style="font-size: 1.2rem;"></i>
+        <div>
+          <strong style="display: block; font-size: 0.85rem; color: #718096;">Phone Number</strong>
+          <a href="tel:+911234567890" class="edu-institution" style="text-decoration: none; font-size: 1rem;">+91 6381318684</a>
+        </div>
+      </li>
+    </ul>
+
+  </div>
+</div>
+
+
+
+    <section class="bio-column">
+      <h1 class="main-heading">K Balaji</h1>
+      <h2 class="sub-heading">Full-Stack Developer</h2>
+      <p class="main-bio-text">
+        Full-Stack Web Developer with a strong track record of building interactive, high-performance web experiences. 
+        Expert in frontend development using Angular, JavaScript for advanced UI animations, seamlessly 
+        integrated with robust backend systems powered by Java. Proficient in managing complex data structures 
+        across both relational (MS SQL) and non-relational (MongoDB) database management systems.
+      </p>
+    </section>
+
+   
+  </main>
+
+<section #aboutSection id="about" class="content-section-block">
+  <h2 class="section-title">About Me</h2>
+  <p class="section-paragraph">
+    Full-Stack Developer with 3+ years of experience engineering robust, enterprise-grade applications. Specializing in Java (Spring Boot) and Angular ecosystems, with deep expertise in managing relational (MSSQL) and non-relational (MongoDB) databases.
+  </p>
+
+  <!-- 2-Column Container -->
+  <div class="about-grid">
+    
+    <!-- Card 1: Backend & Databases -->
+    <div class="about-card">
+  
+      <h3>Backend & Architecture</h3>
+      <ul>
+        <li><strong>Java & Spring Boot:</strong> Designed secure microservices and scalable RESTful APIs.</li>
+        <li><strong>Dual-DB Management:</strong> Structured complex data models in MSSQL and MongoDB.</li>
+        <li><strong>Security:</strong> Implemented secure authentication and authorization protocols.</li>
+      </ul>
+    </div>
+
+    <!-- Card 2: Frontend & AI Innovation -->
+    <div class="about-card">
+    
+      <h3>Frontend & AI Integration</h3>
+      <ul>
+        <li><strong>Angular Framework:</strong> Developed modular, highly responsive user interfaces.</li>
+        <li><strong>Agentic AI:</strong> Built automated, AI-powered customer service engines.</li>
+        <li><strong>Intelligent Logic:</strong> Integrated recommendation algorithms to optimize workflows.</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<!-- EDUCATION SECTION CONTAINER BLOCK -->
+<section #educationSection id="education" class="content-section-block">
+  <h2 class="section-title">Education</h2>
+
+
+  <div class="education-grid">
+    <!-- Academic Card -->
+    <div class="education-card">
+      <div class="edu-icon-container">
+        <fa-icon [icon]="educationIcon" class="edu-icon"></fa-icon>
+      </div>
+      
+      <div class="edu-header">
+        <span class="edu-timeline">2015 - 2019</span>
+        <h3>Bachelor of Engineering in Computer Science</h3>
+        <h4 class="edu-institution">Tagore Engineering College</h4>
+        <span class="edu-location">📍 Chennai, India</span>
+      </div>
+
+      <div class="edu-details">
+        <div class="gpa-badge">
+          <strong>GPA:</strong> 6.51 / 10
+        </div>
+     
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Career Experience Block -->
+
+<section #careerSection id="career" class="content-section-block">
+
+  <h2 class="section-title">Career Experience</h2>
+
+  <!-- Job Breakdown matching your Education Component structure -->
+  <div class="education-grid">
+    <div class="education-card">
+      <div class="edu-header">
+        <div class="edu-icon-container">
+         
+        </div>
+        <h3>Software Engineer</h3>
+        <p class="edu-institution">Agnoshin Technology Pvt Ltd</p>
+        <span class="edu-timeline">Mar 2022 - May 2025</span>
+      </div>
+      
+      <ul>
+        <li>Developed backend applications for Banking IVR services.</li>
+        <li>Designed and developed web applications using Java, Spring Boot, and REST APIs for business-critical workflows.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Technical Skills Breakdown using your About Grid structure -->
+  <div class="about-grid">
+    
+    <!-- Skills Card 1: Core Backend & Cloud -->
+    <div class="about-card">
+      <div class="card-icon-container">
+        <i class="fa-solid fa-server card-icon"></i>
+      </div>
+      <h3>Backend & DevOps</h3>
+      <ul>
+        <li><strong>Languages & Frameworks:</strong> Java, Spring Boot, Microservices, Node.js.</li>
+        <li><strong>Databases:</strong> MongoDB, PostgreSQL, MsSql.</li>
+        <li><strong>Cloud & Infrastructure:</strong> Tomcat, Docker, AWS, Elasticsearch, REST API.</li>
+      </ul>
+    </div>
+
+    <!-- Skills Card 2: Core Frontend Development -->
+    <div class="about-card">
+      <div class="card-icon-container">
+        <i class="fa-solid fa-laptop-code card-icon"></i>
+      </div>
+      <h3>Frontend Development</h3>
+      <ul>
+        <li><strong>Frameworks:</strong> Angular (v16+) .</li>
+        <li><strong>Core Languages:</strong> TypeScript, JavaScript, HTML5, CSS3.</li>
+        <li><strong>State Management:</strong> Redux architecture implementation.</li>
+      </ul>
+    </div>
+    
+  </div>
+</section>
+
+
+
+<!-- Projects Section Block -->
+<!-- Projects Section Block -->
+  <section #projectsSection id="projects" class="content-section-block">
+
+  <h2 class="section-title">Featured Projects</h2>
+
+  <!-- Project Layout utilizing your flex grid system -->
+  <div class="about-grid">
+
+    <!-- Project 1: CISCO Banking -->
+    <div class="about-card" style="flex: 1 1 calc(50% - 20px); min-width: 280px;">
+      <div class="card-icon-container">
+        <i class="fa-solid fa-building-columns card-icon"></i>
+      </div>
+      <h3><strong> Banking IVR</strong></h3>
+      <span class="edu-timeline" style="margin-bottom: 12px;">Java Microservices Application</span>
+      
+      <div class="gpa-badge" style="margin-bottom: 15px; display: block; font-size: 0.8rem;">
+        <strong>Tech Stack:</strong> Spring Boot, Microservices, Java, REST API, Spring Security, MsSQL, JPA
+      </div>
+
+      <ul>
+        <li>Built foundational modular services including Account, Customer, Transactions, Loans, and Insurance modules.</li>
+        <li>Secured APIs using Spring Security coupled with production-ready JWT authentication protocols.</li>
+        <li>Integrated localized Server and API Gateway networks for seamless service discovery and routing.</li>
+        <li>Utilized MsSQL and JPA for deep persistent data management of critical IVR functions.</li>
+        <li>Optimized service communication networks and overall system performance using async processing.</li>
+        <li>Integrated native telecom call-handling infrastructure modules for IVR-based banking workflows.</li>
+      </ul>
+    </div>
+
+    <!-- Project 2: Amazon Web Service Call Management -->
+    <div class="about-card" style="flex: 1 1 calc(50% - 20px); min-width: 280px;">
+      <div class="card-icon-container">
+        <i class="fa-solid fa-cloud card-icon"></i>
+      </div>
+      <h3>AWS Call Management System</h3>
+      <span class="edu-timeline" style="margin-bottom: 12px;">Cloud-Based Infrastructure</span>
+      
+      <div class="gpa-badge" style="margin-bottom: 15px; display: block; font-size: 0.8rem;">
+        <strong>Tech Stack:</strong> Amazon Connect, AWS S3, Lambda, CloudWatch, Java, DynamoDB
+      </div>
+
+      <ul>
+        <li>Stored automated call recordings and transcripts in S3 Buckets for strict compliance audits.</li>
+        <li>Leveraged AWS Lambda for backend automation rules and CloudWatch for active system monitoring.</li>
+        <li>Integrated CRM systems to provide agents with live customer context and streamline call workflows.</li>
+        <li>Configured Amazon Connect contact flows to automate call routing and minimize customer wait times.</li>
+        <li>Connected Amazon Connect with DynamoDB to enable real-time customer data retrieval mechanisms.</li>
+      </ul>
+    </div>
+
+    <!-- Project 3: Agnocon Service Portal -->
+    <div class="about-card" style="flex: 1 1 calc(50% - 20px); min-width: 280px;">
+      <div class="card-icon-container">
+        <i class="fa-solid fa-robot card-icon"></i>
+      </div>
+      <h3>Agnocon Portal</h3>
+      <span class="edu-timeline" style="margin-bottom: 12px;">Customer Service & AI Engine</span>
+      
+      <div class="gpa-badge" style="margin-bottom: 15px; display: block; font-size: 0.8rem;">
+        <strong>Tech Stack:</strong> Angular, TypeScript, Real-time UI/UX, Node.js, WebSockets, Agentic AI
+      </div>
+
+      <ul>
+        <li>Developed a real-time Angular workspace interface for managing intensive live customer calls.</li>
+        <li>Delivered a responsive UI system engineered for high-efficiency support workflows.</li>
+        <li>Integrated Node.js with WebSockets for seamless live chat and email communication tunnels.</li>
+        <li>Implemented secured API communication barriers between decoupled frontend and backend services.</li>
+        <li>Optimized core client performance metrics and reduced application latency for real-time data updates.</li>
+        <li>Built an Agentic AI layer to automate query resolution and assist agents with AI suggestions.</li>
+      </ul>
+    </div>
+
+    <!-- Project 4: Travel Management Portal -->
+    <div class="about-card" style="flex: 1 1 calc(50% - 20px); min-width: 280px;">
+      <div class="card-icon-container">
+        <i class="fa-solid fa-plane-departure card-icon"></i>
+      </div>
+      <h3>Travel Ad Management</h3>
+      <span class="edu-timeline" style="margin-bottom: 12px;">Full-Stack Web Platform</span>
+      
+      <div class="gpa-badge" style="margin-bottom: 15px; display: block; font-size: 0.8rem;">
+        <strong>Tech Stack:</strong> Angular, TypeScript, Spring Boot, Java, PostgreSQL, REST API
+      </div>
+
+      <ul>
+        <li>Built a full-stack booking system for managing complex flight, hotel, and travel package inventories.</li>
+        <li>Developed secure authorization checkpoints and role-based access rules via JWT.</li>
+        <li>Integrated production-ready payment gateway APIs for handling secure online customer transactions.</li>
+        <li>Designed highly performant search and multi-layer filter architectures with responsive UI logic.</li>
+        <li>Implemented RESTful endpoint services in Spring Boot backed by optimized PostgreSQL databases.</li>
+        <li>Integrated automated AI-generated response engines to assist human agents during ticket routing.</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+
+
+  <!-- PROJECTS SECTION CONTAINER BLOCK -->
+  <!-- <section #projectsSection id="projects" class="content-section-block">
+    <h2 class="section-title">Featured Projects</h2>
+    <p class="section-paragraph">
+      Showcase your active production portfolios, live system apps, repository targets, and text layouts.
+    </p>
+  </section> -->
+
+</div>

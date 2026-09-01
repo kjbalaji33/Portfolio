@@ -1,0 +1,61 @@
+  <nav class="navbar-floating">
+    <div class="user-avatar-btn" (click)="isModalOpen = true" style="cursor: pointer;">
+      <fa-icon [icon]="aboutIcon"></fa-icon>
+    </div>
+    
+    <div class="nav-pills-desktop">
+      <a  class="nav-pill" [class.active]="activeSection === 'home'">
+        <fa-icon [icon]="homeIcon" class="nav-icon-spacing"></fa-icon> Home
+      </a>
+      <a  class="nav-pill" [class.active]="activeSection === 'about'">
+        <fa-icon [icon]="aboutIcon" class="nav-icon-spacing"></fa-icon> About
+      </a>
+      <a  class="nav-pill" [class.active]="activeSection === 'education'">
+        <fa-icon [icon]="educationIcon" class="nav-icon-spacing"></fa-icon> Education
+      </a>
+      <a class="nav-pill" [class.active]="activeSection === 'career'">
+        <fa-icon [icon]="careerIcon" class="nav-icon-spacing"></fa-icon> Career
+      </a>
+      <a  class="nav-pill" [class.active]="activeSection === 'projects'">
+        <fa-icon [icon]="projectsIcon" class="nav-icon-spacing"></fa-icon> Projects
+      </a>
+    </div>
+    
+   <!-- Settings Action Button Component -->
+
+<!-- Contact Information Backdrop Modal Overlay -->
+<div class="modal-backdrop" *ngIf="isModalOpen" (click)="isModalOpen = false">
+  
+  <!-- Modal Content Card Container -->
+  <div class="education-card modal-content" (click)="$event.stopPropagation()">
+    
+    <!-- Modal Functional Header Block -->
+    <div class="edu-header" style="margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center;">
+      <h3 style="margin: 0;">Contact Details</h3>
+      <button class="edu-timeline" (click)="isModalOpen = false" style="border: none; cursor: pointer; padding: 4px 12px;">Close</button>
+    </div>
+
+    <!-- Main Contact Information Details -->
+    <ul style="list-style-type: none; padding-left: 0;">
+      <li style="margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+        <i class="fa-solid fa-envelope edu-icon" style="font-size: 1.2rem;"></i>
+        <div>
+          <strong style="display: block; font-size: 0.85rem; color: #718096;">Email ID</strong>
+          <a href="mailto:your.email@example.com" class="edu-institution" style="text-decoration: none; font-size: 1rem;">kjbalaji12@gmail.com</a>
+        </div>
+      </li>
+      
+      <li style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+        <i class="fa-solid fa-phone edu-icon" style="font-size: 1.2rem;"></i>
+        <div>
+          <strong style="display: block; font-size: 0.85rem; color: #718096;">Phone Number</strong>
+          <a href="tel:+911234567890" class="edu-institution" style="text-decoration: none; font-size: 1rem;">+91 6381318684</a>
+        </div>
+      </li>
+    </ul>
+
+  </div>
+</div>
+
+  </nav>
+
